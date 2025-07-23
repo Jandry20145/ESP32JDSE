@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bluetooth LE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-margin-bottom">
+      <ion-col size="12" size-md="6" class="ion-text-center">
+        <ion-button color="tertiary" expand="block" (click)="goToLector()">
+          <ion-icon slot="start" name="reader-outline"></ion-icon>
+          📖 Ir a Lector
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-margin-bottom">
+      <ion-col size="12" size-md="6">
+        <ion-button expand="block" color="warning" (click)="scanAllDevices()">
+          <ion-icon slot="start" name="search-outline"></ion-icon>
+          🔍 Buscar Dispositivos Cercanos
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-margin-bottom">
+      <ion-col size="12" size-md="6">
+        <ion-button expand="block" color="secondary" (click)="goToInstrucciones()">
+          <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+          📝 Instrucciones
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-text *ngIf="devices.length === 0">
+    <p class="ion-text-center">No hay dispositivos encontrados aún</p>
+  </ion-text>
+
+  <ion-list *ngIf="devices.length > 0">
+    <ion-list-header>
+      <ion-label>Dispositivos Detectados</ion-label>
+    </ion-list-header>
+
+    <ion-item *ngFor="let device of devices">
+      <ion-label>
+        <h2>{{ device.device.name || 'Sin nombre' }}</h2>
+        <p>{{ device.device.deviceId }}</p>
+      </ion-label>
+      <ion-button slot="end" color="success" (click)="connect(device.device.deviceId)">
+        Conectar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  </ion-grid>
+</ion-content>

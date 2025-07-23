@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        Regresar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>🏥 Lector de Estudio Metabólico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo-gradiente">
+
+  <!-- Título Principal -->
+  <ion-toolbar color="light">
+    <ion-title size="large" class="titulo-leccion">🩻 Lector de Datos Actividad Fisica</ion-title>
+  </ion-toolbar>
+
+  <!-- Cuadrícula de tarjetas de datos -->
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card-color glucosa">
+          <ion-card-header>
+            <ion-icon name="pulse-sharp" class="icono-grande rojo"></ion-icon>
+            <ion-card-subtitle class="subtitulo texto-negro">Glucosa</ion-card-subtitle>
+            <ion-card-title class="valor texto-negro">{{ datos?.glucosa }} mg/dL</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="card-color colesterol">
+          <ion-card-header>
+            <ion-icon name="pulse-sharp" class="icono-grande rojo"></ion-icon>
+            <ion-card-subtitle class="subtitulo texto-negro">Colesterol Total</ion-card-subtitle>
+            <ion-card-title class="valor texto-negro">{{ datos?.colesterol_Total }} mg/dL</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="card-color trigliceridos">
+          <ion-card-header>
+            <ion-icon name="thermometer-sharp" class="icono-grande naranja"></ion-icon>
+            <ion-card-subtitle class="subtitulo texto-negro">Trigliceridos</ion-card-subtitle>
+            <ion-card-title class="valor texto-negro">{{ datos?.trigliceridos }} mg/dL</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="card-color imc">
+          <ion-card-header>
+            <ion-icon name="heart-circle" class="icono-grande azul"></ion-icon>
+            <ion-card-subtitle class="subtitulo texto-negro">índice de masa corporal</ion-card-subtitle>
+            <ion-card-title class="valor texto-negro">{{ datos?.indice_masa_corporal }} peso / estatura</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
