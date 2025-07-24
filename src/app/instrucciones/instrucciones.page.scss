@@ -1,46 +1,53 @@
+/* Encabezado superior con estilo moderno y profesional */
 ion-header {
   background-color: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
   ion-toolbar {
-    --background: #3f51b5;
+    --background: #2e3c59;
+    /* Azul oscuro profesional */
     --color: #ffffff;
   }
 
   ion-title {
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 0.5px;
   }
 
   ion-button {
     color: #ffffff;
+    font-weight: 500;
   }
 }
 
+/* Fondo del contenido con tono neutro claro */
 ion-content {
-  --background: #f5f7fa;
+  --background: #f9fbfc;
   padding: 1rem;
 }
 
+/* Encabezados de sección */
 h2 {
   font-size: 22px;
-  color: #1a237e;
-  font-weight: bold;
-  margin-top: 12px;
-  margin-bottom: 20px;
+  color: #2e3c59;
+  font-weight: 700;
+  margin: 16px 0 20px;
   text-align: center;
 }
 
+/* Tarjetas elegantes con gradiente suave y sombra */
 ion-card {
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin-bottom: 20px;
-  background: linear-gradient(to right, #e3f2fd, #ffffff);
-  transition: transform 0.2s;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+  background: linear-gradient(to right, #e8f5e9, #ffffff);
+  /* Verde pálido a blanco */
+  transition: transform 0.2s ease-in-out;
 }
 
 ion-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 ion-card-header {
@@ -50,27 +57,33 @@ ion-card-header {
 ion-card-title {
   font-size: 20px;
   font-weight: 600;
-  color: #0d47a1;
+  color: #1565c0;
+  /* Azul salud profesional */
 }
 
+/* Contenido de texto dentro de las tarjetas */
 ion-card-content p {
   font-size: 16px;
-  color: #333333;
+  color: #444;
   line-height: 1.6;
   margin-top: 0.5rem;
   margin-bottom: 0;
 }
 
+/* Títulos centrados */
 .titulo-centro {
   text-align: center;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
+  color: #2e3c59;
 }
 
+/* Estilo para tarjetas variables centradas */
 .card-variable {
   text-align: center;
 }
 
+/* Imagen con estética médica profesional */
 .imagen-variable {
   display: block;
   margin: 0 auto;
@@ -78,9 +91,13 @@ ion-card-content p {
   max-width: 300px;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Texto centrado reutilizable */
 .texto-centro {
   text-align: center;
+  color: #37474f;
+  font-weight: 500;
 }

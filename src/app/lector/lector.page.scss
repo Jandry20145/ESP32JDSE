@@ -1,144 +1,156 @@
-/* Fondo con gradiente suave */
+/* Fondo general con gradiente suave para salud */
 .fondo-gradiente {
-  --background: linear-gradient(to bottom right, #e3f2fd, #e8f5e9); // azul claro a verde claro
+  background: linear-gradient(135deg, #e8f5e9, #e3f2fd, #f3e5f5);
+  /* Verde suave, azul claro, lavanda */
 }
 
-/* Título principal de cada sección */
+/* Título principal de sección */
 .titulo-leccion {
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
-  color: #1a237e; // azul profundo
-  margin-top: 12px;
-  font-size: 1.5rem;
+  color: #2e3c59;
+  /* Azul grisáceo elegante */
+  margin-top: 16px;
+  font-size: 1.6rem;
 }
 
-/* Contenedor vertical con espaciado */
+/* Contenedor con espaciado vertical */
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  gap: 24px;
+  padding: 24px;
 }
 
-/* Tarjetas personalizadas */
+/* Tarjetas con estilo moderno y profesional */
 .card-color {
-  border-radius: 14px;
+  border-radius: 16px;
+  padding: 16px;
   color: #ffffff;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Colores específicos de cada métrica */
+.card-color:hover {
+  transform: translateY(-4px);
+}
+
+/* Paletas suaves para cada métrica */
 .glucosa {
-  background: linear-gradient(to right, #1de9b6, #00acc1); // verde agua a azul cian
+  background: linear-gradient(to right, #81c784, #4caf50);
+  /* Verde claro a verde saludable */
 }
 
 .colesterol {
-  background: linear-gradient(to right, #26c6da, #0288d1); // azul vibrante
+  background: linear-gradient(to right, #4fc3f7, #0288d1);
+  /* Azul cielo a azul profundo */
 }
 
 .trigliceridos {
-  background: linear-gradient(to right, #66bb6a, #43a047); // verde saludable
+  background: linear-gradient(to right, #ffb74d, #f57c00);
+  /* Naranja suave a intenso */
 }
 
 .imc {
-  background: linear-gradient(to right, #7986cb, #5c6bc0); // azul violeta médico
+  background: linear-gradient(to right, #9575cd, #5e35b1);
+  /* Violeta médico */
 }
 
-/* Íconos grandes en las tarjetas */
+/* Íconos grandes y blancos */
 .icono-grande {
-  font-size: 46px;
-  padding-bottom: 10px;
-  color: white;
+  font-size: 44px;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
-/* Texto de subtítulos en tarjetas */
+/* Texto subtítulo */
 .subtitulo {
   font-size: 1.1rem;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
-/* Valor principal mostrado en tarjetas */
+/* Valor numérico principal */
 .valor {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
-/* Colores suaves para íconos si los necesitas */
+/* Clases auxiliares de color */
 .rojo {
-  color: #ef9a9a;
+  color: #d32f2f;
 }
 
 .naranja {
-  color: #ffcc80;
+  color: #f57c00;
 }
 
 .azul {
-  color: #90caf9;
+  color: #1976d2;
 }
 
 .rosa {
-  color: #f48fb1;
+  color: #ec407a;
+}
+
+.texto-negro {
+  color: #212121;
 }
 
 /* Contenedor del mapa */
 #map-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+  width: 100%;
+  max-width: 650px;
+  height: 320px;
+  margin: 20px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #cfd8dc;
 }
 
-/* Mapa con estilo moderno */
+/* Estilo del mapa */
 #map {
   width: 100%;
-  max-width: 600px;
-  height: 300px;
-  margin: 20px auto;
-  border-radius: 15px;
-  border: 2px solid #cfd8dc;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  height: 100%;
 }
 
-/* Contenedor de información adicional (hospitales, recomendaciones, etc.) */
+/* Información adicional (como hospitales) */
 .hospitales-info {
-  text-align: center;
-  padding: 14px 20px;
-  background-color: #f5f5f5;
+  background-color: #fafafa;
+  padding: 20px;
   border-radius: 14px;
-  margin: 20px;
+  margin: 24px auto;
+  max-width: 650px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hospitales-info h2 {
-  color: #2e3c59;
-  margin-bottom: 10px;
+  color: #37474f;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .hospitales-info ul {
   list-style: none;
   padding: 0;
-  font-size: 16px;
-  color: #444;
+  margin: 0;
+  font-size: 15px;
+  color: #555;
 }
 
 .hospitales-info li {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
-/* Popups personalizados del mapa */
-.popup-negro {
-  color: #212121 !important;
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 10px;
-  font-weight: bold;
-}
-
-.mapboxgl-popup-content.popup-negro {
+/* Popups del mapa estilo limpio */
+.mapboxgl-popup-content {
   color: #212121 !important;
   background-color: #ffffff !important;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 10px;
+  font-weight: 600;
   font-size: 14px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
